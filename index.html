@@ -1,65 +1,108 @@
-<<<<<<< SEARCH
-                <img src="https://placehold.co/100x100" alt="Logo Grupo Scout San Jorge 103" class="h-16 mr-4">
-=======
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d76f8d5f-36e0-4861-84c0-7dfd0781722a.png" alt="Logo Grupo Scout San Jorge 103" class="h-16 mr-4">
->>>>>>> REPLACE
-2. Add book cover placeholders to each book card:
-
-
-```diff
-<<<<<<< SEARCH
-                <!-- Book 1 -->
-                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
-=======
-                <!-- Book 1 -->
-                <div class="scout-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff3d0925-91a7-4e38-858e-a3da32a0e1bf.png" alt="Manual del Scout - Portada" class="w-full h-48 object-cover">
-                    <div class="p-4">
->>>>>>> REPLACE
-`
-<<<<<<< SEARCH
-                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
-                    </a>
-=======
-                    <div class="flex justify-between items-center mt-4">
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Manual</span>
-                        <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                            <i class="far fa-file-pdf mr-1"></i>PDF
-                        </a>
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual - Grupo Scout San Jorge 103</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .scout-theme {
+            --primary-color: #2C662D;
+            --secondary-color: #F8C537;
+            --accent-color: #214f21;
+        }
+        
+        .hero-pattern {
+            background-image: url('https://placehold.co/1920x800/2C662D/FFFFFF');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pdf-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e53e3e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="scout-theme">
+    <!-- Header -->
+    <header class="bg-green-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://placehold.co/80x80/2C662D/FFFFFF" alt="Logo del Grupo Scout San Jorge 103" class="mr-4">
+                    <div>
+                        <h1 class="text-2xl font-bold">Grupo Scout San Jorge 103</h1>
+                        <p class="text-green-200">CADiSCA - Ciudadela, Buenos Aires</p>
                     </div>
->>>>>>> REPLACE
-4. Add a search bar to the hero section:
-
-
-```diff
-<<<<<<< SEARCH
-    <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
-=======
-    <!-- Hero Section -->
-    <section class="bg-green-50 py-12 text-center">
-        <div class="container mx-auto px-4">
-            <div class="badge inline-block mb-6">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3be1e59b-51ef-4d03-8432-ebdbd925a16e.png" alt="Libro abierto con símbolos scout" class="h-24">
-            </div>
-            <h2 class="title-font text-4xl md:text-5xl text-green-800 mb-4">¡Explora, Aprende y Comparte!</h2>
-            <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
-                <div class="relative">
-                    <input type="text" placeholder="Buscar libros..." class="w-full p-4 pr-12 rounded-full border-2 border-green-300 focus:outline-none focus:border-green-500">
-                    <button class="absolute right-3 top-3 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition">
-                        <i class="fas fa-search"></i>
-                    </button>
                 </div>
+                <nav class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="text-white hover:text-yellow-300 font-medium">Inicio</a>
+                    <a href="#biblioteca" class="text-white hover:text-yellow-300 font-medium">Biblioteca</a>
+                    <a href="#nosotros" class="text-white hover:text-yellow-300 font-medium">Nosotros</a>
+                    <a href="#contacto" class="text-white hover:text-yellow-300 font-medium">Contacto</a>
+                </nav>
             </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Biblioteca Virtual Scout</h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Accede a nuestra colección de recursos educativos y materiales formativos para el escultismo</p>
+            <a href="#biblioteca" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Explorar Biblioteca</a>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
->>>>>>> REPLACE                  
+    <main class="container mx-auto px-4 py-12">
+        <!-- Biblioteca Section -->
+        <section id="biblioteca" class="mb-20">
+            <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Nuestra Colección</h2>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <button class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-800 transition">Todos</button>
+                <button class="bg-gray-200 px-6 py-2 rounded-full hover:bg-gray-300 transition">Manuales</button>
+                <button class="bg-gray-200 px-6 py-2 rounded-full hover:bg-gray-300 transition">Actividades</button>
+                <button class="bg-gray-200 px-6 py-2 rounded-full hover:bg-gray-300 transition">Formación</button>
+                <button class="bg-gray-200 px-6 py-2 rounded-full hover:bg-gray-300 transition">Historias</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- PDF Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <img src="https://placehold.co/400x300/2C662D/FFFFFF" alt="Portada del Manual de Escultismo para Jóvenes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Manual Básico de Escultismo</h3>
+                            <div class="pdf-icon">
+                                <span class="text-white font-bold">PDF</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4Voy a crear una interfaz moderna y funcional para la biblioteca virtual del grupo scout San Jorge 103. Será totalmente responsive y con un diseño scout-friendly que combine la estética scout con funcionalidades útiles.
 
-Would you like me to provide any additional changes or focus on specific sections? I can adjust or add more modifications based on your needs.Here is the updated HTML content after applying above edits:
+Aquí tienes el diseño completo en un solo archivo HTML:
 
 ```html
 <!DOCTYPE html>
@@ -67,162 +110,287 @@ Would you like me to provide any additional changes or focus on specific section
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Scout Virtual | Grupo Scout San Jorge 103</title>
+    <title>Biblioteca Virtual - Grupo Scout San Jorge 103</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Comic+Neue:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600;800&display=swap');
         
         :root {
-            --scout-green: #2E7D32;
-            --scout-light: #C8E6C9;
-            --scout-dark: #1B5E20;
-            --scout-accent: #FFC107;
+            --primary: #006341;
+            --secondary: #BE2941;
+            --accent: #F4A900;
+            --light: #F8F8F8;
         }
         
         body {
-            font-family: 'Comic Neue', cursive;
-            background-color: #f0f9f0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light);
+            color: #333;
         }
         
-        .title-font {
-            font-family: 'Bubblegum Sans', cursive;
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
         }
         
-        .scout-card {
+        .header-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .card {
             transition: all 0.3s ease;
-            border-left: 5px solid var(--scout-accent);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-        .scout-card:hover {
+        .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         
         .badge {
-            animation: float 3s ease-in-out infinite;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .download-btn {
+            background-color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #9e1f34;
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="bg-gradient-to-r from-green-700 to-green-900 text-white py-6 shadow-md">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+    <header class="header-gradient text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d76f8d5f-36e0-4861-84c0-7dfd0781722a.png" alt="Logo Grupo Scout San Jorge 103" class="h-16 mr-4">
+                <div class="mr-4">
+                    <img src="https://placehold.co/80x80" alt="Logo del Grupo Scout San Jorge 103 CADiSCA" class="rounded-full border-4 border-white">
+                </div>
                 <div>
-                    <h1 class="title-font text-2xl md:text-3xl">Biblioteca Scout Virtual</h1>
-                    <p class="text-sm md:text-base text-green-100">Grupo Scout San Jorge 103 - CADiSCA</p>
+                    <h1 class="text-2xl md:text-3xl font-bold">Grupo Scout San Jorge 103</h1>
+                    <p class="text-sm md:text-base opacity-90">Ciudadela, Buenos Aires</p>
                 </div>
             </div>
-            <nav class="md:ml-auto flex space-x-4">
-                <a href="#libros" class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold transition">Libros</a>
-                <a href="#" class="text-yellow-300 hover:text-white px-3 py-1 text-sm">
-                    <i class="fas fa-lock mr-1"></i>Admin
-                </a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Inicio</a></li>
+                    <li><a href="#" class="hover:underline">Acerca de</a></li>
+                    <li><a href="#" class="hover:underline">Contacto</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-green-50 py-12 text-center">
-        <div class="container mx-auto px-4">
-            <div class="badge inline-block mb-6">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3be1e59b-51ef-4d03-8432-ebdbd925a16e.png" alt="Libro abierto con símbolos scout" class="h-24">
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Biblioteca Virtual</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Documentos importantes, manuales y recursos educativos para todos los miembros del grupo scout</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-12 max-w-3xl mx-auto">
+            <div class="relative">
+                <input type="text" placeholder="Buscar documentos..." class="w-full py-3 px-6 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600">
+                <button class="absolute right-3 top-3 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
             </div>
-            <h2 class="title-font text-4xl md:text-5xl text-green-800 mb-4">¡Explora, Aprende y Comparte!</h2>
-            <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
-                <div class="relative">
-                    <input type="text" placeholder="Buscar libros..." class="w-full p-4 pr-12 rounded-full border-2 border-green-300 focus:outline-none focus:border-green-500">
-                    <button class="absolute right-3 top-3 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition">
-                        <i class="fas fa-search"></i>
-                    </button>
+        </div>
+
+        <!-- Categories -->
+        <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-6 text-gray-700">Categorías</h3>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-2 rounded-full bg-green-600 text-white hover:bg-green-700 transition">Todos</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-green-600 text-green-600 hover:bg-green-50 transition">Manuales</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-green-600 text-green-600 hover:bg-green-50 transition">Reglamentos</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-green-600 text-green-600 hover:bg-green-50 transition">Actividades</button>
+                <button class="px-6 py-2 rounded-full bg-white border border-green-600 text-green-600 hover:bg-green-50 transition">Eventos</button>
+            </div>
+        </div>
+
+        <!-- Documents Grid -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 text-gray-700">Documentos disponibles</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Document Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden relative">
+                    <div class="badge">
+                        Nuevo
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Portada del Manual de Lobatos con ilustraciones de animales y naturaleza" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Manual de Lobatos</h3>
+                        <p class="text-sm text-gray-600 mb-4">Guía completa para los niños y niñas de la rama Lobatos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 2.4MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Reglamento Scout con diseño oficial y emblema de la organización" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Reglamento Scout</h3>
+                        <p class="text-sm text-gray-600 mb-4">Normas y principios que rigen nuestra organización scout.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 3.1MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Juegos Scout al aire libre con niños participando en actividades grupales" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Juegos Scout</h3>
+                        <p class="text-sm text-gray-600 mb-4">Colección de juegos educativos para todas las edades.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 1.8MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Campamentos educativos con tiendas de campaña en entorno natural" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Guía de Campamentos</h3>
+                        <p class="text-sm text-gray-600 mb-4">Todo lo necesario para organizar un campamento exitoso.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 4.2MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Primeros auxilios básicos con ilustraciones médicas y botiquín" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Primeros Auxilios</h3>
+                        <p class="text-sm text-gray-600 mb-4">Manual básico de primeros auxilios para actividades al aire libre.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 2.7MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <img src="https://placehold.co/600x400" alt="Nudos y Amarres Scout con diferentes tipos de cuerdas y técnicas" class="w-full h-48 object-cover rounded">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Nudos y Amarres</h3>
+                        <p class="text-sm text-gray-600 mb-4">Guía ilustrada de nudos esenciales para scouts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">PDF - 1.5MB</span>
+                            <a href="#" class="download-btn text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                Descargar
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
-        <!-- Book Categories -->
-        <section id="libros" class="mb-12">
-            <h2 class="title-font text-3xl text-green-800 mb-6">Libros Disponibles</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Book 1 -->
-                <div class="scout-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff3d0925-91a7-4e38-858e-a3da32a0e1bf.png" alt="Manual del Scout - Portada" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
-                        <i class="fas fa-book mr-2 text-yellow-500"></i>
-                        Manual del Scout
-                    </h3>
-                    <p class="text-gray-600 mb-2">Un manual completo para todos los scouts, lleno de técnicas y consejos.</p>
-                    <div class="flex justify-between items-center mt-4">
-                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Manual</span>
-                        <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                            <i class="far fa-file-pdf mr-1"></i>PDF
-                        </a>
-                    </div>
-                </div>
-                <!-- Book 2 -->
-                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
-                        <i class="fas fa-book mr-2 text-yellow-500"></i>
-                        Guía de Nudos
-                    </h3>
-                    <p class="text-gray-600 mb-2">Aprende a hacer nudos esenciales para tus actividades al aire libre.</p>
-                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
-                    </a>
-                </div>
-                <!-- Book 3 -->
-                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
-                        <i class="fas fa-book mr-2 text-yellow-500"></i>
-                        Organización de Campamentos
-                    </h3>
-                    <p class="text-gray-600 mb-2">Todo lo que necesitas saber para organizar un campamento exitoso.</p>
-                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
-                    </a>
-                </div>
-                <!-- Book 4 -->
-                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
-                        <i class="fas fa-book mr-2 text-yellow-500"></i>
-                        100 Juegos Scouts
-                    </h3>
-                    <p class="text-gray-600 mb-2">Una colección de juegos para animar tus reuniones scout.</p>
-                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
-                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+            <nav class="flex items-center space-x-2">
+                <button class="px-4 py-2 border rounded-md bg-white text-green-600 hover:bg-green-50">Anterior</button>
+                <button class="px-4 py-2 border rounded-md bg-green-600 text-white">1</button>
+                <button class="px-4 py-2 border rounded-md bg-white text-green-600 hover:bg-green-50">2</button>
+                <button class="px-4 py-2 border rounded-md bg-white text-green-600 hover:bg-green-50">3</button>
+                <button class="px-4 py-2 border rounded-md bg-white text-green-600 hover:bg-green-50">Siguiente</button>
+            </nav>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-green-900 text-white py-8">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="mt-2 text-sm text-green-300">Grupo Scout San Jorge 103<br>CADiSCA - Ciudadela, Buenos Aires<br>
-                    <span class="text-green-400">Contacto: biblioteca@sanjorge103.org</span></p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Grupo Scout San Jorge 103</h3>
+                    <p class="text-sm">CADiSCA - Ciudadela, Buenos Aires</p>
+                    <p class="text-sm mt-2">"Siempre Listos"</p>
                 </div>
-            </div>
-            <div class="mt-6 pt-6 border-t border-green-800 text-center text-sm text-green-400">
-                <p>© 2024 Biblioteca Virtual Scout | Todos los recursos son para uso educativo sin fines de lucro</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Aquí puedes agregar cualquier funcionalidad adicional si es necesario
-    </script>
-</body>
-</html>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:underline">Inicio</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Biblioteca</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Calendario</a></li>
+                        <li><a href="#" class="text-sm hover:underline">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <p class="text-sm">Email: sanjorge103@example.com</p>
+                    <p class="text-sm mt-2">Teléfono: +54 11 1234-5678</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="hover:text-green-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.
