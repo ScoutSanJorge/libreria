@@ -1,1 +1,217 @@
-# libreria
+<<<<<<< SEARCH
+                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
+                    </a>
+=======
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Manual</span>
+                        <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                            <i class="far fa-file-pdf mr-1"></i>PDF
+                        </a>
+                    </div>
+>>>>>>> REPLACE
+
+Run
+Copy code
+
+4. Add a search bar to the hero section:
+
+
+```diff
+<<<<<<< SEARCH
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+=======
+    <!-- Hero Section -->
+    <section class="bg-green-50 py-12 text-center">
+        <div class="container mx-auto px-4">
+            <div class="badge inline-block mb-6">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3be1e59b-51ef-4d03-8432-ebdbd925a16e.png" alt="Libro abierto con símbolos scout" class="h-24">
+            </div>
+            <h2 class="title-font text-4xl md:text-5xl text-green-800 mb-4">¡Explora, Aprende y Comparte!</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Buscar libros..." class="w-full p-4 pr-12 rounded-full border-2 border-green-300 focus:outline-none focus:border-green-500">
+                    <button class="absolute right-3 top-3 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+>>>>>>> REPLACE
+
+Run
+Copy code
+                  
+
+Would you like me to provide any additional changes or focus on specific sections? I can adjust or add more modifications based on your needs.Here is the updated HTML content after applying above edits:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Scout Virtual | Grupo Scout San Jorge 103</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Comic+Neue:wght@400;700&display=swap');
+        
+        :root {
+            --scout-green: #2E7D32;
+            --scout-light: #C8E6C9;
+            --scout-dark: #1B5E20;
+            --scout-accent: #FFC107;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #f0f9f0;
+        }
+        
+        .title-font {
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        
+        .scout-card {
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--scout-accent);
+        }
+        
+        .scout-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
+        }
+        
+        .badge {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-700 to-green-900 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d76f8d5f-36e0-4861-84c0-7dfd0781722a.png" alt="Logo Grupo Scout San Jorge 103" class="h-16 mr-4">
+                <div>
+                    <h1 class="title-font text-2xl md:text-3xl">Biblioteca Scout Virtual</h1>
+                    <p class="text-sm md:text-base text-green-100">Grupo Scout San Jorge 103 - CADiSCA</p>
+                </div>
+            </div>
+            <nav class="md:ml-auto flex space-x-4">
+                <a href="#libros" class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold transition">Libros</a>
+                <a href="#" class="text-yellow-300 hover:text-white px-3 py-1 text-sm">
+                    <i class="fas fa-lock mr-1"></i>Admin
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-green-50 py-12 text-center">
+        <div class="container mx-auto px-4">
+            <div class="badge inline-block mb-6">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3be1e59b-51ef-4d03-8432-ebdbd925a16e.png" alt="Libro abierto con símbolos scout" class="h-24">
+            </div>
+            <h2 class="title-font text-4xl md:text-5xl text-green-800 mb-4">¡Explora, Aprende y Comparte!</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Buscar libros..." class="w-full p-4 pr-12 rounded-full border-2 border-green-300 focus:outline-none focus:border-green-500">
+                    <button class="absolute right-3 top-3 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Book Categories -->
+        <section id="libros" class="mb-12">
+            <h2 class="title-font text-3xl text-green-800 mb-6">Libros Disponibles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Book 1 -->
+                <div class="scout-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff3d0925-91a7-4e38-858e-a3da32a0e1bf.png" alt="Manual del Scout - Portada" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
+                        <i class="fas fa-book mr-2 text-yellow-500"></i>
+                        Manual del Scout
+                    </h3>
+                    <p class="text-gray-600 mb-2">Un manual completo para todos los scouts, lleno de técnicas y consejos.</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Manual</span>
+                        <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                            <i class="far fa-file-pdf mr-1"></i>PDF
+                        </a>
+                    </div>
+                </div>
+                <!-- Book 2 -->
+                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
+                        <i class="fas fa-book mr-2 text-yellow-500"></i>
+                        Guía de Nudos
+                    </h3>
+                    <p class="text-gray-600 mb-2">Aprende a hacer nudos esenciales para tus actividades al aire libre.</p>
+                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
+                    </a>
+                </div>
+                <!-- Book 3 -->
+                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
+                        <i class="fas fa-book mr-2 text-yellow-500"></i>
+                        Organización de Campamentos
+                    </h3>
+                    <p class="text-gray-600 mb-2">Todo lo que necesitas saber para organizar un campamento exitoso.</p>
+                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
+                    </a>
+                </div>
+                <!-- Book 4 -->
+                <div class="scout-card bg-white rounded-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl text-green-800 mb-4 flex items-center">
+                        <i class="fas fa-book mr-2 text-yellow-500"></i>
+                        100 Juegos Scouts
+                    </h3>
+                    <p class="text-gray-600 mb-2">Una colección de juegos para animar tus reuniones scout.</p>
+                    <a href="#" class="text-green-600 hover:text-green-800 text-sm font-bold">
+                        <i class="far fa-file-pdf mr-1"></i>Descargar PDF
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="mt-2 text-sm text-green-300">Grupo Scout San Jorge 103<br>CADiSCA - Ciudadela, Buenos Aires<br>
+                    <span class="text-green-400">Contacto: biblioteca@sanjorge103.org</span></p>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-green-800 text-center text-sm text-green-400">
+                <p>© 2024 Biblioteca Virtual Scout | Todos los recursos son para uso educativo sin fines de lucro</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Aquí puedes agregar cualquier funcionalidad adicional si es necesario
+    </script>
+</body>
+</html>
